@@ -1,0 +1,53 @@
+
+## run activemq as docker container//this command will  help you to run amd64 image to arm64 mac m1.
+>docker run  --platform linux/amd64 -p 61616:61616  -p 8161:8161 rmohr/activemq
+user admin
+pass admin
+
+
+
+
+
+
+
+
+1# basic processing/transformation of a message 
+  taking one file from one location and storing it to another Location.
+   
+2# putting message by mcroservice-a on a queue and processes by another microservice-b
+3# putting json message via microservice-a and consumes it in microservice-b  while marshalling(json to java bean ) using jackson Library.
+   in active-mq camel route.
+4# Transforming and processing  after unmarshalling in camel-route. 
+   Exchange[ExchangePattern: InOnly, BodyType: com.in28minutes.microservices.camelmicroserviceb.CurrencyExchange, Body: CurrencyExchange [id=1002, from=AUD, to=INR, conversionMultiple=100]]
+   
+   
+5#putting xml  message via microservice-a and consumes it in microservice-b  while marshalling(xml to java bean ) using jacksonxml  Library.
+   in active-mq camel route.
+
+
+6# start kafka via docker-compose up    //command
+   >docker-compose up //from the directory where docker-compose.yaml file is sitting.
+   
+   REFER
+   https://setapp.com/how-to/edit-mac-hosts-file
+   >sudo nano /private/etc/hosts
+   
+   
+   note: camel routes we are able to do because of DSL(DOMAIN SPECIFIC LANGUAGE).
+   
+----------------------------
+7## making http restAPI calls from a camel route.
+
+
+8# using choice and when conditions using  simple language in camel Routes
+https://camel.apache.org/components/3.20.x/languages/simple-language.html //SIMPLE langauge1.1  camel  , we can use this to write conditions
+ //for example header values we can pick up
+ //for example exception we can pick up in  case  of any exception is raised.
+ //In essence we can write simple Logic with camel using SIMPLE language.
+  
+ 
+9#creating reusable end points in camel routes.
+Eneterpise 
+10# EI Patterns(pipeline/multicast)
+
+ 
